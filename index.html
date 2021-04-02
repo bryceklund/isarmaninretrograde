@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Is Arman in Retrograde?</title>
-</head>
-<body style="background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); background-attachment: fixed; font-size: 100px; text-align: center; margin-top: 50px;">
-    idk
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Is Arman in Retrograde?</title>
+    </head>
+    <script type="text/javascript">
+        const decision = Math.floor(Math.random() * 10 % 3) + 1;
+        const bgyes = 'background: linear-gradient(0deg, rgba(240,197,52,1) 0%, rgba(253,72,45,1) 100%); background-attachment: fixed;';
+        const bgno = 'background: radial-gradient(circle, rgba(85,244,251,1) 0%, rgba(70,104,252,1) 100%); background-attachment: fixed;';
+        const bgidk = 'background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); background-attachment: fixed;';
+        window.onload = function() {
+            if (decision == 1) {
+                document.body.style.cssText += bgyes;
+                document.getElementById('answer').append('Yes');
+                console.log('yes');
+            } else if (decision == 2) {
+                document.body.style.cssText += bgno;
+                document.getElementById('answer').append('No');
+                console.log('no');
+            } else if (decision == 3) {
+                document.body.style.cssText += bgidk;
+                document.getElementById('answer').append('idk');
+                console.log('idk');
+            }
+        }
+    </script>
+    <body style="font-size: 100px; text-align: center; margin-top: 50px;">
+        <p id="answer"></p>
+    </body>
 </html>
